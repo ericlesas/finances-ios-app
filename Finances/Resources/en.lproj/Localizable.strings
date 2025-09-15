@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Finances
+
+  Created by Éricles de Alencar Santos on 08/08/25.
+  
+*/
+
+/* MARK: - Login */
+
+"login.welcome.label.title" = "BOAS VINDAS!";
+"login.welcome.label.description" = "Pronto para organizar suas finanças? Acesse agora";
+"login.name.placeholder" = "Nome";
+"login.email.placeholder" = "E-mail";
+"login.password.placeholder" = "Senha";
+"login.button.title" = "Entrar";
+
+"login.save.alert.title" = "Deseja salvar seu acesso?";
+"login.save.alert.message" = "Salve o seu acesso para se manter conectado!";
+"login.save.alert.positiveText" = "Sim";
+"login.save.alert.negativeText" = "Não";
+
+"login.error.alert.title" = "Dados incorretos";
+"login.error.alert.message" = "Erro ao realizar login, verifique os dados digitados";
+"login.error.alert.retry" = "Tentar novamente";
+
+"login.save.biometry.alert.title" = "Deseja habilitar o login com biometria?";
+"login.save.biometry.alert.message" = "Utilize o reconhecimento biométrico para deixar seu acesso ao aplicativo mais rápido, fácil e seguro!";
