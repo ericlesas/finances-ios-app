@@ -17,6 +17,8 @@ class HomeView: UIView {
 		return view
 	}()
 	
+	// TODO: Adicionar demais elementos ao header
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		setupView()
