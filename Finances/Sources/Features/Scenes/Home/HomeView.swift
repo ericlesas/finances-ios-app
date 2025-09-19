@@ -17,8 +17,43 @@ class HomeView: UIView {
 		return view
 	}()
 	
-	// TODO: Adicionar demais elementos ao header
+	let profileImage: UIImageView = {
+		let imageView = UIImageView()
+		imageView.contentMode = .scaleAspectFit
+		imageView.clipsToBounds = true
+		imageView.isUserInteractionEnabled = true
+		imageView.image = UIImage(systemName: "person.crop.circle") // TODO: Passar responsabilidade para controller
+		imageView.tintColor = Colors.gray500
+		imageView.layer.cornerRadius = Metrics.medium
+		imageView.translatesAutoresizingMaskIntoConstraints = false
+		return imageView
+	}()
 	
+	let profileName: UILabel = {
+		let label = UILabel()
+		label.font = Typography.titleMd
+		label.textColor = Colors.gray700
+		label.translatesAutoresizingMaskIntoConstraints = false
+		return label
+	}()
+	
+	let welcomeFinancesLabel: UILabel = {
+		let label = UILabel()
+		label.text = "home.header.welcome.label".localized
+		label.font = Typography.textSmRegular
+		label.textColor = Colors.gray500
+		label.translatesAutoresizingMaskIntoConstraints = false
+		return label
+	}()
+	
+	let logoutButton: UIButton = {
+		let button = UIButton()
+		button.setImage(UIImage(named: "logout"), for: .normal)
+		button.tintColor = Colors.gray500
+		button.translatesAutoresizingMaskIntoConstraints = false
+		return button
+	}()
+		
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		setupView()
@@ -30,16 +65,41 @@ class HomeView: UIView {
 	
 	private func setupView(){
 		addSubview(headerView)
+		headerView.addSubview(profileImage)
+		headerView.addSubview(profileName)
+		headerView.addSubview(welcomeFinancesLabel)
+		headerView.addSubview(logoutButton)
 		
 		setupConstraints()
 	}
 	
 	private func setupConstraints() {
 		NSLayoutConstraint.activate([
-			headerView.topAnchor.constraint(equalTo: topAnchor),
+			headerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
 			headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
 			headerView.trailingAnchor.constraint(equalTo: trailingAnchor),
 			headerView.heightAnchor.constraint(equalToConstant: Metrics.profileSize),
+			
+			profileImage.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
+			profileImage.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: Metrics.small),
+			profileImage.heightAnchor.constraint(equalToConstant: Metrics.buttonSize),
+			profileImage.widthAnchor.constraint(equalToConstant: Metrics.buttonSize),
+			
+			profileName.topAnchor.constraint(equalTo: profileImage.topAnchor),
+			profileName.leadingAnchor.constraint(equalTo: profileImage.trailingAnchor, constant: Metrics.small),
+			
+			welcomeFinancesLabel.topAnchor.constraint(equalTo: profileName.bottomAnchor, constant: Metrics.tiny),
+			welcomeFinancesLabel.leadingAnchor.constraint(equalTo: profileName.leadingAnchor),
+			
+			logoutButton.topAnchor.constraint(equalTo: headerView.topAnchor, constant: Metrics.high),
+			logoutButton.centerYAnchor.constraint(equalTo: headerView.centerYAnchor),
+			logoutButton.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -Metrics.small),
+			logoutButton.heightAnchor.constraint(equalToConstant: Metrics.huge),
+			logoutButton.widthAnchor.constraint(equalToConstant: Metrics.huge),
 		])
+	}
+	
+	func updateProfileName(_ name: String) {
+		profileName.text = name
 	}
 }

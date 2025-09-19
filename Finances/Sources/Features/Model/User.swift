@@ -8,7 +8,7 @@
 import Foundation
 
 struct User: Codable {
-//	let name: String -> TODO: Evoluir para salvar o nome do usuário
+	let name: String
 	let email: String
 	let userIsSaved: Bool
 	let hasBiometryEnabled: Bool

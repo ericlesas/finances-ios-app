@@ -10,15 +10,15 @@ import Firebase
 
 class LoginViewModel {
 	
-	var successResult: ((String) -> Void)?
+	var successResult: ((String, String) -> Void)?
 	var errorResult: ((String) -> Void)?
 	
-	func doAuth(email: String, password: String) {
+ 	func doAuth(name: String, email: String, password: String) {
 		Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResut, error in
 			if let error = error {
 				self?.errorResult?("login.error.alert.message".localized)
 			} else {
-				self?.successResult?(email)
+				self?.successResult?(name, email)
 			}
 		}
 	}

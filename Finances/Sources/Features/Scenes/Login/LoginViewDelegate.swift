@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LoginViewDelegate: AnyObject {
-	func sendLoginData(email: String, password: String)
+	func sendLoginData(name: String, email: String, password: String)
 }

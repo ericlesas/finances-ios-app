@@ -52,8 +52,8 @@ class LoginViewController: UIViewController {
 	}
 	
 	private func bindViewModel() {
-		viewModel.successResult = { [weak self] email in
-			self?.presentSavedLoginAlert(email: email)
+		viewModel.successResult = { [weak self] name, email in
+			self?.presentSavedLoginAlert(name: name, email: email)
 		}
 		
 		viewModel.errorResult = { [weak self] errorMessage in
@@ -61,13 +61,13 @@ class LoginViewController: UIViewController {
 		}
 	}
 	
-	private func presentSavedLoginAlert(email: String) {
+	private func presentSavedLoginAlert(name: String, email: String) {
 		let alertControler = UIAlertController(title: "login.save.alert.title".localized,
 											   message: "login.save.alert.message".localized,
 											   preferredStyle: .alert)
 		let saveAction = UIAlertAction(title: "login.save.alert.positiveText".localized,
 									   style: .default) { _ in
-			self.askEnabledFaceId(email: email)
+			self.askEnabledFaceId(name: name, email: email)
 		}
 		let cancelAction = UIAlertAction(title: "login.save.alert.negativeText".localized,
 										 style: .cancel) { _ in
@@ -79,19 +79,19 @@ class LoginViewController: UIViewController {
 		self.present(alertControler, animated: false)
 	}
 	
-	private func askEnabledFaceId(email: String) {
+	private func askEnabledFaceId(name: String, email: String) {
 		let alert = UIAlertController(title: "login.save.biometry.alert.title".localized,
 									  message: "login.save.biometry.alert.message".localized,
 									  preferredStyle: .alert)
 		let yesAction = UIAlertAction(title: "login.save.alert.positiveText".localized,
 									  style: .default) { _ in
-			let user = User(email: email, userIsSaved: true, hasBiometryEnabled: true)
+			let user = User(name: name, email: email, userIsSaved: true, hasBiometryEnabled: true)
 			UserDefaultsManager.saveUser(user: user)
 			self.flowDelegate?.navigateToHome()
 		}
 		let noAction = UIAlertAction(title: "login.save.alert.negativeText".localized,
 									 style: .cancel) { _ in
-			let user = User(email: email, userIsSaved: true, hasBiometryEnabled: false)
+			let user = User(name: name, email: email, userIsSaved: true, hasBiometryEnabled: false)
 			UserDefaultsManager.saveUser(user: user)
 			self.flowDelegate?.navigateToHome()
 		}
@@ -124,7 +124,7 @@ class LoginViewController: UIViewController {
 
 // MARK: - Extension
 extension LoginViewController: LoginViewDelegate {
-	func sendLoginData(email: String, password: String) {
-		viewModel.doAuth(email: email, password: password)
+	func sendLoginData(name: String, email: String, password: String) {
+		viewModel.doAuth(name: name, email: email, password: password)
 	}
 }

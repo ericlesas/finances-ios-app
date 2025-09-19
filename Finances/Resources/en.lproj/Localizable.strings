@@ -26,3 +26,9 @@
 
 "login.save.biometry.alert.title" = "Deseja habilitar o login com biometria?";
 "login.save.biometry.alert.message" = "Utilize o reconhecimento biométrico para deixar seu acesso ao aplicativo mais rápido, fácil e seguro!";
+
+/* MARK: - Home */
+
+"home.header.welcome.label" = "Vamos organizar suas finanças?";
+"home.header.username.label" = "Olá, %@!";
+"home.header.greeting.fallback" = "Olá!";

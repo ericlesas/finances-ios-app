@@ -22,12 +22,25 @@ class HomeViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
+		getUsername()
 	}
 	
 	private func setupUI() {
 		self.view.addSubview(contentView)
 		self.view.backgroundColor = Colors.gray100
 		setupConstraints()
+	}
+	
+	private func getUsername() {
+		guard let user = UserDefaultsManager.loadUser() else { return }
+		
+		let greeting: String
+		if !user.name.isEmpty {
+			greeting = String(format: "home.header.username.label".localized, user.name)
+		} else {
+			greeting = "home.header.greeting.fallback".localized
+		}
+		contentView.updateProfileName(greeting)
 	}
 	
 	private func setupConstraints() {

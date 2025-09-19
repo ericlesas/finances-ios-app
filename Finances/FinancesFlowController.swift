@@ -43,7 +43,6 @@ extension FinancesFlowController: SplashFlowDelegate {
 	func navigateToHomeFromSplash() {
 		self.navigationController?.dismiss(animated: false)
 		let home = HomeViewController()
-		home.view.backgroundColor = .green
 		self.navigationController?.pushViewController(home, animated: true)
 	}
 }
@@ -53,7 +52,6 @@ extension FinancesFlowController: LoginFlowDelegate {
 	func navigateToHome() {
 		self.navigationController?.dismiss(animated: false)
 		let home = HomeViewController()
-		home.view.backgroundColor = .green
 		self.navigationController?.pushViewController(home, animated: true)
 	}
 }
