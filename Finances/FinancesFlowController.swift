@@ -42,7 +42,7 @@ extension FinancesFlowController: SplashFlowDelegate {
 	
 	func navigateToHomeFromSplash() {
 		self.navigationController?.dismiss(animated: false)
-		let home = HomeViewController()
+		let home = HomeViewController(flowDelegate: self)
 		self.navigationController?.pushViewController(home, animated: true)
 	}
 }
@@ -51,7 +51,15 @@ extension FinancesFlowController: SplashFlowDelegate {
 extension FinancesFlowController: LoginFlowDelegate {
 	func navigateToHome() {
 		self.navigationController?.dismiss(animated: false)
-		let home = HomeViewController()
+		let home = HomeViewController(flowDelegate: self)
 		self.navigationController?.pushViewController(home, animated: true)
+	}
+}
+
+// MARK: - Home
+extension FinancesFlowController: HomeFlowDelegate {
+	func logout() {
+		self.navigationController?.popViewController(animated: false)
+		self.navigateToLogin()
 	}
 }

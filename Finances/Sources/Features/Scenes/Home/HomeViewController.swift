@@ -10,8 +10,10 @@ import UIKit
 
 class HomeViewController: UIViewController {
 	let contentView = HomeView()
+	public weak var flowDelegate: HomeFlowDelegate?
 	
-	init() {
+	init(flowDelegate: HomeFlowDelegate) {
+		self.flowDelegate = flowDelegate
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -23,14 +25,16 @@ class HomeViewController: UIViewController {
 		super.viewDidLoad()
 		setupUI()
 		getUsername()
+		getProfileImage()
 	}
 	
 	private func setupUI() {
 		self.view.addSubview(contentView)
 		self.view.backgroundColor = Colors.gray100
+		contentView.delegate = self
 		setupConstraints()
 	}
-	
+
 	private func getUsername() {
 		guard let user = UserDefaultsManager.loadUser() else { return }
 		
@@ -43,6 +47,12 @@ class HomeViewController: UIViewController {
 		contentView.updateProfileName(greeting)
 	}
 	
+	private func getProfileImage() {
+		if let userImage = UserDefaultsManager.loadProfileImage() {
+			contentView.profileImage.image = userImage
+		}
+	}
+	
 	private func setupConstraints() {
 		contentView.translatesAutoresizingMaskIntoConstraints = false
 		
@@ -52,5 +62,36 @@ class HomeViewController: UIViewController {
 			contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 			contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 		])
+	}
+}
+
+// MARK: - Extension
+extension HomeViewController: HomeViewDelegate {
+	func didTapLogoutButton() {
+		UserDefaultsManager.removeUser()
+		UserDefaultsManager.removeProfileImage()
+		flowDelegate?.logout()
+	}
+	
+	func didTapProfileImage() {
+		changeProfileImage()
+	}
+}
+
+extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	private func changeProfileImage() {
+		let picker = UIImagePickerController()
+		picker.delegate = self
+		picker.sourceType = .photoLibrary
+		picker.allowsEditing = true
+		present(picker, animated: true)
+	}
+	
+	internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+		if let chosenImage = info[.editedImage] as? UIImage ?? info[.originalImage] as? UIImage {
+			contentView.profileImage.image = chosenImage
+			UserDefaultsManager.saveProfileImage(chosenImage)
+		}
+		dismiss(animated: true)
 	}
 }

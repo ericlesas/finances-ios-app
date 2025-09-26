@@ -10,6 +10,8 @@ import UIKit
 
 class HomeView: UIView {
 	
+	weak public var delegate: HomeViewDelegate?
+	
 	let headerView: UIView = {
 		let view = UIView()
 		view.backgroundColor = Colors.gray100
@@ -22,7 +24,7 @@ class HomeView: UIView {
 		imageView.contentMode = .scaleAspectFit
 		imageView.clipsToBounds = true
 		imageView.isUserInteractionEnabled = true
-		imageView.image = UIImage(systemName: "person.crop.circle") // TODO: Passar responsabilidade para controller
+		imageView.image = UIImage(systemName: "person.crop.circle")
 		imageView.tintColor = Colors.gray500
 		imageView.layer.cornerRadius = Metrics.medium
 		imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +52,7 @@ class HomeView: UIView {
 		let button = UIButton()
 		button.setImage(UIImage(named: "logout"), for: .normal)
 		button.tintColor = Colors.gray500
+		button.addTarget(self, action: #selector(logoutButtonTapped), for: .touchUpInside)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		return button
 	}()
@@ -71,6 +74,7 @@ class HomeView: UIView {
 		headerView.addSubview(logoutButton)
 		
 		setupConstraints()
+		setupImageGesture()
 	}
 	
 	private func setupConstraints() {
@@ -97,6 +101,22 @@ class HomeView: UIView {
 			logoutButton.heightAnchor.constraint(equalToConstant: Metrics.huge),
 			logoutButton.widthAnchor.constraint(equalToConstant: Metrics.huge),
 		])
+	}
+	
+	private func setupImageGesture() {
+		let gestureRecoganizer = UITapGestureRecognizer(target: self,
+														action: #selector(profileImageTapped))
+		profileImage.addGestureRecognizer(gestureRecoganizer)
+	}
+	
+	@objc
+	private func logoutButtonTapped() {
+		delegate?.didTapLogoutButton()
+	}
+	
+	@objc
+	private func profileImageTapped() {
+		delegate?.didTapProfileImage()
 	}
 	
 	func updateProfileName(_ name: String) {

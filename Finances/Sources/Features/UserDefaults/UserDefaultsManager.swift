@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 class UserDefaultsManager {
 	private static let userKey = "userKey"
+	private static let profileImageKey = "profileImageKey"
 	
 	static func saveUser(user: User) {
 		let encoder = JSONEncoder()
@@ -26,5 +28,28 @@ class UserDefaultsManager {
 			}
 		}
 		return nil
+	}
+	
+	static func saveProfileImage(_ image: UIImage) {
+		if let imageData = image.pngData() {
+			UserDefaults.standard.set(imageData, forKey: profileImageKey)
+		}
+	}
+	
+	static func loadProfileImage() -> UIImage? {
+		if let imageData = UserDefaults.standard.data(forKey: profileImageKey) {
+			return UIImage(data: imageData)
+		}
+		return nil
+	}
+	
+	static func removeUser() {
+		UserDefaults.standard.removeObject(forKey: userKey)
+		UserDefaults.standard.synchronize()
+	}
+	
+	static func removeProfileImage() {
+		UserDefaults.standard.removeObject(forKey: profileImageKey)
+		UserDefaults.standard.synchronize()
 	}
 }
