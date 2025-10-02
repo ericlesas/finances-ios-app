@@ -45,6 +45,7 @@
 		3BE745EE2E78C4C500C40225 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE745ED2E78C4C500C40225 /* HomeViewController.swift */; };
 		3BF726772E8215C80036DF68 /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF726762E8215C80036DF68 /* HomeFlowDelegate.swift */; };
 		3BF726792E82179F0036DF68 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF726782E82179F0036DF68 /* HomeViewDelegate.swift */; };
+		3BF7267C2E8F3E850036DF68 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7267B2E8F3E840036DF68 /* FloatingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		3BE745ED2E78C4C500C40225 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3BF726762E8215C80036DF68 /* HomeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowDelegate.swift; sourceTree = "<group>"; };
 		3BF726782E82179F0036DF68 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
+		3BF7267B2E8F3E840036DF68 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		A6007FA95A555808DFBCA64A /* Pods_Finances.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finances.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96194A5F372BF8C85EBE979 /* Pods-Finances.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances.debug.xcconfig"; path = "Target Support Files/Pods-Finances/Pods-Finances.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -286,6 +288,7 @@
 		3B90C9EA2E3C22AE0092977F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3BF7267A2E8F3E6E0036DF68 /* FloatingButton */,
 				3B90C9EE2E3D5EC60092977F /* Button */,
 				3B90C9ED2E3D5EBD0092977F /* Input */,
 			);
@@ -349,6 +352,14 @@
 				3BF726762E8215C80036DF68 /* HomeFlowDelegate.swift */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		3BF7267A2E8F3E6E0036DF68 /* FloatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				3BF7267B2E8F3E840036DF68 /* FloatingButton.swift */,
+			);
+			path = FloatingButton;
 			sourceTree = "<group>";
 		};
 		41E1B751BDEA9208911492D8 /* Pods */ = {
@@ -495,6 +506,7 @@
 			files = (
 				3B90C9EC2E3C23450092977F /* Input.swift in Sources */,
 				3B8A07BA2E3A95F700473EB6 /* LoginViewController.swift in Sources */,
+				3BF7267C2E8F3E850036DF68 /* FloatingButton.swift in Sources */,
 				3BD5DFF02E723227009BA731 /* Keyboard.swift in Sources */,
 				3B8A07B62E3A93FC00473EB6 /* LoginView.swift in Sources */,
 				3B8A07CA2E3AA66400473EB6 /* Typography.swift in Sources */,

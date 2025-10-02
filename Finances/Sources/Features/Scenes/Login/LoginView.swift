@@ -65,7 +65,6 @@ class LoginView: UIView {
 	let loginButton: Button = {
 		let button = Button(title: "login.button.title".localized,
 							backgroundColor: Colors.magenta)
-		button.addTarget(self, action: #selector(loginButtonDidTaped), for: .touchUpInside)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		return button
 	}()
@@ -77,6 +76,7 @@ class LoginView: UIView {
 	init() {
 		super.init(frame: .zero)
 		setupUI()
+		loginButton.delegate = self
 	}
 	
 	private func setupUI() {
@@ -138,9 +138,11 @@ class LoginView: UIView {
 			loginButton.heightAnchor.constraint(equalToConstant: Metrics.buttonSize),
 		])
 	}
-	
-	@objc
-	private func loginButtonDidTaped() {
+}
+
+// MARK: - Extension
+extension LoginView: ButtonDelegate {
+	func buttonAction() {
 		let email = emailInput.textField.text ?? ""
 		let name = nameInput.textField.text ?? ""
 		let password = passwordInput.textField.text ?? ""

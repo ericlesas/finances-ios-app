@@ -56,10 +56,24 @@ class HomeView: UIView {
 		button.translatesAutoresizingMaskIntoConstraints = false
 		return button
 	}()
-		
+	
+	let contentBackgroundView: UIView = {
+		let view = UIView()
+		view.backgroundColor = Colors.gray300
+		view.translatesAutoresizingMaskIntoConstraints = false
+		return view
+	}()
+	
+	let floatingButton: FloatingButton = {
+		let button = FloatingButton()
+		button.translatesAutoresizingMaskIntoConstraints = false
+		return button
+	}()
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		setupView()
+		floatingButton.delegate = self
 	}
 	
 	required init?(coder: NSCoder) {
@@ -72,6 +86,8 @@ class HomeView: UIView {
 		headerView.addSubview(profileName)
 		headerView.addSubview(welcomeFinancesLabel)
 		headerView.addSubview(logoutButton)
+		addSubview(contentBackgroundView)
+		addSubview(floatingButton)
 		
 		setupConstraints()
 		setupImageGesture()
@@ -100,6 +116,16 @@ class HomeView: UIView {
 			logoutButton.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -Metrics.small),
 			logoutButton.heightAnchor.constraint(equalToConstant: Metrics.huge),
 			logoutButton.widthAnchor.constraint(equalToConstant: Metrics.huge),
+			
+			floatingButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+			floatingButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -Metrics.inputImageSize),
+			floatingButton.widthAnchor.constraint(equalToConstant: Metrics.buttonSize),
+			floatingButton.heightAnchor.constraint(equalToConstant: Metrics.buttonSize),
+			
+			contentBackgroundView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -Metrics.medium),
+			contentBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
+			contentBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+			contentBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
 		])
 	}
 	
@@ -121,5 +147,12 @@ class HomeView: UIView {
 	
 	func updateProfileName(_ name: String) {
 		profileName.text = name
+	}
+}
+
+// MARK: - Extension
+extension HomeView: FloatingButtonDelegate {
+	func buttonAction() {
+		print("Abrir bottomsheet")
 	}
 }
