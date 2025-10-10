@@ -153,6 +153,6 @@ class HomeView: UIView {
 // MARK: - Extension
 extension HomeView: FloatingButtonDelegate {
 	func buttonAction() {
-		print("Abrir bottomsheet")
+		delegate?.didTapFloatingButton()
 	}
 }

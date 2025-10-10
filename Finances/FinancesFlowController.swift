@@ -24,20 +24,9 @@ class FinancesFlowController {
 // MARK: - Splash
 extension FinancesFlowController: SplashFlowDelegate {
 	func navigateToLogin() {
-		guard let nav = self.navigationController else { return }
+		self.navigationController?.dismiss(animated: false)
 		let login = LoginViewController(flowDelegate: self)
-		login.view.alpha = 0
-		nav.viewControllers = [login]
-		
-		UIView.transition(with: nav.view,
-						  duration: 1.5,
-						  options: [.transitionCrossDissolve],
-						  animations: {
-			login.view.alpha = 1
-		},
-						  completion: nil)
-		
-		nav.isNavigationBarHidden = true
+		self.navigationController?.pushViewController(login, animated: false)
 	}
 	
 	func navigateToHomeFromSplash() {
@@ -58,8 +47,20 @@ extension FinancesFlowController: LoginFlowDelegate {
 
 // MARK: - Home
 extension FinancesFlowController: HomeFlowDelegate {
+	func openNewExpenseBottomSheet() {
+		let bottomSheet = NewExpenseBottomSheetViewController(flowDelegate: self)
+		self.navigationController?.present(bottomSheet, animated: true)
+	}
+	
 	func logout() {
 		self.navigationController?.popViewController(animated: false)
 		self.navigateToLogin()
+	}
+}
+
+// MARK: - NewExpenseBottomSheet
+extension FinancesFlowController: NewExpenseBottomSheetFlowDelegate {
+	func closeBottomSheet() {
+		self.navigationController?.presentedViewController?.dismiss(animated: true)
 	}
 }

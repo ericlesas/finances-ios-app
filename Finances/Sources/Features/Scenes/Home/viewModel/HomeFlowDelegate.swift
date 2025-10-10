@@ -9,4 +9,5 @@ import Foundation
 
 public protocol HomeFlowDelegate: AnyObject {
 	func logout()
+	func openNewExpenseBottomSheet()
 }

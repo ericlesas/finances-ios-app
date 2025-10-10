@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04A07F2DAA94DB5C525D383C /* Pods_Finances.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6007FA95A555808DFBCA64A /* Pods_Finances.framework */; };
 		3B0FCFCD2E3983A0004B465F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0FCFCC2E3983A0004B465F /* AppDelegate.swift */; };
 		3B0FCFCF2E3983A0004B465F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0FCFCE2E3983A0004B465F /* SceneDelegate.swift */; };
 		3B0FCFD62E3983AE004B465F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FCFD52E3983AE004B465F /* Assets.xcassets */; };
@@ -16,6 +15,8 @@
 		3B430C2C2E4A969100E9C471 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B430C2B2E4A969100E9C471 /* LoginViewModel.swift */; };
 		3B430C2E2E4A969F00E9C471 /* LoginFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B430C2D2E4A969F00E9C471 /* LoginFlowDelegate.swift */; };
 		3B430C302E4A990A00E9C471 /* LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B430C2F2E4A990A00E9C471 /* LoginViewDelegate.swift */; };
+		3B4DD3162E946B6700A51A4A /* NewExpenseBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4DD3152E946B6700A51A4A /* NewExpenseBottomSheetViewController.swift */; };
+		3B4DD3192E946D7100A51A4A /* NewExpenseBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4DD3182E946D7100A51A4A /* NewExpenseBottomSheetView.swift */; };
 		3B5B6C172E6120A4007D8022 /* FinancesFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B6C162E6120A4007D8022 /* FinancesFlowController.swift */; };
 		3B5B6C192E61281F007D8022 /* SplashFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5B6C182E61281F007D8022 /* SplashFlowDelegate.swift */; };
 		3B6BF3422E4AAF9E008DFC06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B6BF3412E4AAF9D008DFC06 /* GoogleService-Info.plist */; };
@@ -41,15 +42,17 @@
 		3B90C9EC2E3C23450092977F /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90C9EB2E3C23450092977F /* Input.swift */; };
 		3B90C9F02E3D5EDF0092977F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90C9EF2E3D5EDF0092977F /* Button.swift */; };
 		3BD5DFF02E723227009BA731 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5DFEF2E723227009BA731 /* Keyboard.swift */; };
+		3BE0634F2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0634E2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift */; };
+		3BE063512E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE063502E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift */; };
 		3BE745EC2E78C0F100C40225 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE745EB2E78C0F100C40225 /* HomeView.swift */; };
 		3BE745EE2E78C4C500C40225 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE745ED2E78C4C500C40225 /* HomeViewController.swift */; };
 		3BF726772E8215C80036DF68 /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF726762E8215C80036DF68 /* HomeFlowDelegate.swift */; };
 		3BF726792E82179F0036DF68 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF726782E82179F0036DF68 /* HomeViewDelegate.swift */; };
 		3BF7267C2E8F3E850036DF68 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF7267B2E8F3E840036DF68 /* FloatingButton.swift */; };
+		E4FAFE3523819C53CCF7F696 /* Pods_Finances.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1156B75C68CDE7ED080D208 /* Pods_Finances.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00A83C4AFC1237199536CB30 /* Pods-Finances.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances.release.xcconfig"; path = "Target Support Files/Pods-Finances/Pods-Finances.release.xcconfig"; sourceTree = "<group>"; };
 		3B0FCFC92E3983A0004B465F /* Finances.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finances.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0FCFCC2E3983A0004B465F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B0FCFCE2E3983A0004B465F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +63,8 @@
 		3B430C2B2E4A969100E9C471 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3B430C2D2E4A969F00E9C471 /* LoginFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowDelegate.swift; sourceTree = "<group>"; };
 		3B430C2F2E4A990A00E9C471 /* LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewDelegate.swift; sourceTree = "<group>"; };
+		3B4DD3152E946B6700A51A4A /* NewExpenseBottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseBottomSheetViewController.swift; sourceTree = "<group>"; };
+		3B4DD3182E946D7100A51A4A /* NewExpenseBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseBottomSheetView.swift; sourceTree = "<group>"; };
 		3B5B6C162E6120A4007D8022 /* FinancesFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancesFlowController.swift; sourceTree = "<group>"; };
 		3B5B6C182E61281F007D8022 /* SplashFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowDelegate.swift; sourceTree = "<group>"; };
 		3B6BF3412E4AAF9D008DFC06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -85,13 +90,16 @@
 		3B90C9EB2E3C23450092977F /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		3B90C9EF2E3D5EDF0092977F /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		3BD5DFEF2E723227009BA731 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		3BE0634E2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseBottomSheetFlowDelegate.swift; sourceTree = "<group>"; };
+		3BE063502E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseBottomSheetViewDelegate.swift; sourceTree = "<group>"; };
 		3BE745EB2E78C0F100C40225 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3BE745ED2E78C4C500C40225 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3BF726762E8215C80036DF68 /* HomeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowDelegate.swift; sourceTree = "<group>"; };
 		3BF726782E82179F0036DF68 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
 		3BF7267B2E8F3E840036DF68 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
-		A6007FA95A555808DFBCA64A /* Pods_Finances.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finances.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C96194A5F372BF8C85EBE979 /* Pods-Finances.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances.debug.xcconfig"; path = "Target Support Files/Pods-Finances/Pods-Finances.debug.xcconfig"; sourceTree = "<group>"; };
+		B1156B75C68CDE7ED080D208 /* Pods_Finances.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Finances.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B139528F2394EDE0828794A0 /* Pods-Finances.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances.release.xcconfig"; path = "Target Support Files/Pods-Finances/Pods-Finances.release.xcconfig"; sourceTree = "<group>"; };
+		D7903D775D11E28E41CAD86D /* Pods-Finances.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Finances.debug.xcconfig"; path = "Target Support Files/Pods-Finances/Pods-Finances.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A07F2DAA94DB5C525D383C /* Pods_Finances.framework in Frameworks */,
+				E4FAFE3523819C53CCF7F696 /* Pods_Finances.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +120,7 @@
 				3B0FCFCB2E3983A0004B465F /* Finances */,
 				3B0FCFCA2E3983A0004B465F /* Products */,
 				41E1B751BDEA9208911492D8 /* Pods */,
-				7991C465B21C64B4B89DA77A /* Frameworks */,
+				5FCDF74764E048ABAA746214 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +164,17 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		3B4DD3142E946B4600A51A4A /* NewExpenseBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				3BE0634D2E986AF40032222B /* viewModel */,
+				3B4DD3152E946B6700A51A4A /* NewExpenseBottomSheetViewController.swift */,
+				3B4DD3182E946D7100A51A4A /* NewExpenseBottomSheetView.swift */,
+				3BE063502E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift */,
+			);
+			path = NewExpenseBottomSheet;
+			sourceTree = "<group>";
+		};
 		3B6D6F8E2E6654000067BE92 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +215,7 @@
 		3B8A07A82E3987BE00473EB6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3B4DD3142E946B4600A51A4A /* NewExpenseBottomSheet */,
 				3BE745EA2E78C0E100C40225 /* Home */,
 				3B8A07B42E3A93EB00473EB6 /* Login */,
 				3B8A07A92E3987CB00473EB6 /* Splash */,
@@ -327,6 +347,14 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		3BE0634D2E986AF40032222B /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3BE0634E2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		3BE745EA2E78C0E100C40225 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,16 +393,16 @@
 		41E1B751BDEA9208911492D8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C96194A5F372BF8C85EBE979 /* Pods-Finances.debug.xcconfig */,
-				00A83C4AFC1237199536CB30 /* Pods-Finances.release.xcconfig */,
+				D7903D775D11E28E41CAD86D /* Pods-Finances.debug.xcconfig */,
+				B139528F2394EDE0828794A0 /* Pods-Finances.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		7991C465B21C64B4B89DA77A /* Frameworks */ = {
+		5FCDF74764E048ABAA746214 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6007FA95A555808DFBCA64A /* Pods_Finances.framework */,
+				B1156B75C68CDE7ED080D208 /* Pods_Finances.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -386,11 +414,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B0FCFDD2E3983AE004B465F /* Build configuration list for PBXNativeTarget "Finances" */;
 			buildPhases = (
-				F459DA3FD0904609CFDB95A2 /* [CP] Check Pods Manifest.lock */,
+				A7DBD40906C2E851104250BE /* [CP] Check Pods Manifest.lock */,
 				3B0FCFC52E3983A0004B465F /* Sources */,
 				3B0FCFC62E3983A0004B465F /* Frameworks */,
 				3B0FCFC72E3983A0004B465F /* Resources */,
-				474AE5B8DC743186438B3BEF /* [CP] Embed Pods Frameworks */,
+				E00AE227FDA9E9E997B82499 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -458,24 +486,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		474AE5B8DC743186438B3BEF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F459DA3FD0904609CFDB95A2 /* [CP] Check Pods Manifest.lock */ = {
+		A7DBD40906C2E851104250BE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -497,6 +508,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E00AE227FDA9E9E997B82499 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Finances/Pods-Finances-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -509,6 +537,7 @@
 				3BF7267C2E8F3E850036DF68 /* FloatingButton.swift in Sources */,
 				3BD5DFF02E723227009BA731 /* Keyboard.swift in Sources */,
 				3B8A07B62E3A93FC00473EB6 /* LoginView.swift in Sources */,
+				3B4DD3162E946B6700A51A4A /* NewExpenseBottomSheetViewController.swift in Sources */,
 				3B8A07CA2E3AA66400473EB6 /* Typography.swift in Sources */,
 				3B8A07AB2E3987E100473EB6 /* SplashViewController.swift in Sources */,
 				3BF726772E8215C80036DF68 /* HomeFlowDelegate.swift in Sources */,
@@ -516,6 +545,7 @@
 				3BF726792E82179F0036DF68 /* HomeViewDelegate.swift in Sources */,
 				3BE745EE2E78C4C500C40225 /* HomeViewController.swift in Sources */,
 				3B8A07CD2E3ABCF100473EB6 /* Metrics.swift in Sources */,
+				3BE0634F2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift in Sources */,
 				3B8A07B12E39A0B700473EB6 /* Colors.swift in Sources */,
 				3B5B6C192E61281F007D8022 /* SplashFlowDelegate.swift in Sources */,
 				3B8A07AD2E3987F100473EB6 /* SplashView.swift in Sources */,
@@ -523,7 +553,9 @@
 				3B0FCFCD2E3983A0004B465F /* AppDelegate.swift in Sources */,
 				3B5B6C172E6120A4007D8022 /* FinancesFlowController.swift in Sources */,
 				3B430C2E2E4A969F00E9C471 /* LoginFlowDelegate.swift in Sources */,
+				3B4DD3192E946D7100A51A4A /* NewExpenseBottomSheetView.swift in Sources */,
 				3BE745EC2E78C0F100C40225 /* HomeView.swift in Sources */,
+				3BE063512E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift in Sources */,
 				3B0FCFCF2E3983A0004B465F /* SceneDelegate.swift in Sources */,
 				3B6D6F902E6654110067BE92 /* User.swift in Sources */,
 				3B430C302E4A990A00E9C471 /* LoginViewDelegate.swift in Sources */,
@@ -667,7 +699,7 @@
 		};
 		3B0FCFDE2E3983AE004B465F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C96194A5F372BF8C85EBE979 /* Pods-Finances.debug.xcconfig */;
+			baseConfigurationReference = D7903D775D11E28E41CAD86D /* Pods-Finances.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -682,7 +714,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -698,7 +730,7 @@
 		};
 		3B0FCFDF2E3983AE004B465F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00A83C4AFC1237199536CB30 /* Pods-Finances.release.xcconfig */;
+			baseConfigurationReference = B139528F2394EDE0828794A0 /* Pods-Finances.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -713,7 +745,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -32,3 +32,10 @@
 "home.header.welcome.label" = "Vamos organizar suas finanças?";
 "home.header.username.label" = "Olá, %@!";
 "home.header.greeting.fallback" = "Olá!";
+
+/* MARK: - NewExpenseBottomSheet */
+
+"new.expense.bottom.sheet.label.title" = "NOVO LANÇAMENTO";
+"new.expense.bottom.sheet.transaction.placeholder" = "Título da transação";
+"new.expense.bottom.sheet.category.placeholder" = "Categoria";
+"new.expense.bottom.sheet.button.save" = "Salvar";

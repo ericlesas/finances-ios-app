@@ -48,9 +48,11 @@ class LoginView: UIView {
 	let nameInput = Input(placeholder: "login.name.placeholder".localized,
 						  imageName: nil,
 						  imagePosition: nil)
+	
 	let emailInput = Input(placeholder: "login.email.placeholder".localized,
 						   imageName: nil,
 						   imagePosition: nil)
+	
 	let passwordInput = Input(placeholder: "login.password.placeholder".localized,
 							  imageName: "eye-closed",
 							  imagePosition: .right)
@@ -69,14 +71,14 @@ class LoginView: UIView {
 		return button
 	}()
 	
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
-	
 	init() {
 		super.init(frame: .zero)
 		setupUI()
 		loginButton.delegate = self
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
 	}
 	
 	private func setupUI() {

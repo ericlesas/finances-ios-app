@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		animateLoginTransition()
 		contentView.delegate = self
 		setupUI()
 		self.presentLoginFieldsAnimation()
@@ -42,13 +43,27 @@ class LoginViewController: UIViewController {
 	
 	private func setupConstraints() {
 		contentView.translatesAutoresizingMaskIntoConstraints = false
-		
 		NSLayoutConstraint.activate([
 			contentView.topAnchor.constraint(equalTo: view.topAnchor),
 			contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 			contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 		])
+	}
+	
+	private func animateLoginTransition() {
+		self.view.alpha = 0
+		if let nav = self.navigationController {
+			nav.viewControllers = [self]
+			UIView.transition(with: nav.view,
+							  duration: 1.5,
+							  options: [.transitionCrossDissolve],
+							  animations: {
+				self.view.alpha = 1
+			},
+							  completion: nil)
+			nav.isNavigationBarHidden = true
+		}
 	}
 	
 	private func bindViewModel() {

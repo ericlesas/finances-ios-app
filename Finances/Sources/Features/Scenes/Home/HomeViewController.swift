@@ -76,8 +76,13 @@ extension HomeViewController: HomeViewDelegate {
 	func didTapProfileImage() {
 		changeProfileImage()
 	}
+	
+	func didTapFloatingButton() {
+		flowDelegate?.openNewExpenseBottomSheet()
+	}
 }
 
+// MARK: - Extension
 extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	private func changeProfileImage() {
 		let picker = UIImagePickerController()
