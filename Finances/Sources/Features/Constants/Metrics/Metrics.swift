@@ -21,5 +21,6 @@ public struct Metrics {
 	public static var inputSize: CGFloat = 56
 	public static var profileImageSize: CGFloat = 68
 	public static var profileSize: CGFloat = 120
+	public static var width: CGFloat = 175
 	public static var logoImageSize: CGFloat = 400
 }

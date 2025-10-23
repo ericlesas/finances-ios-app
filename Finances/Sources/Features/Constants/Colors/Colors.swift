@@ -44,3 +44,26 @@ public struct Colors {
 		view.layer.insertSublayer(gradient, at: 0)
 	}
 }
+
+// MARK: - Extension
+extension UIColor {
+	func light(opacity: CGFloat = 0.05) -> UIColor {
+		return self.withAlphaComponent(opacity)
+	}
+	
+	func dark(by percentage: CGFloat = 0.3) -> UIColor {
+		var red: CGFloat = 0
+		var green: CGFloat = 0
+		var blue: CGFloat = 0
+		var alpha: CGFloat = 0
+		
+		getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+		
+		return UIColor(
+			red: red * (1 - percentage),
+			green: green * (1 - percentage),
+			blue: blue * (1 - percentage),
+			alpha: alpha
+		)
+	}
+}

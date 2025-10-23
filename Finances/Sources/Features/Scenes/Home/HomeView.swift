@@ -10,6 +10,7 @@ import UIKit
 
 class HomeView: UIView {
 	
+	// MARK: - Properties
 	weak public var delegate: HomeViewDelegate?
 	
 	let headerView: UIView = {
@@ -70,6 +71,7 @@ class HomeView: UIView {
 		return button
 	}()
 	
+	// MARK: - Initializer
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		setupView()
@@ -80,6 +82,7 @@ class HomeView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Setup Methods
 	private func setupView(){
 		addSubview(headerView)
 		headerView.addSubview(profileImage)
@@ -135,6 +138,7 @@ class HomeView: UIView {
 		profileImage.addGestureRecognizer(gestureRecoganizer)
 	}
 	
+	// MARK: - Actions
 	@objc
 	private func logoutButtonTapped() {
 		delegate?.didTapLogoutButton()
@@ -145,6 +149,7 @@ class HomeView: UIView {
 		delegate?.didTapProfileImage()
 	}
 	
+	// MARK: - Public Methods
 	func updateProfileName(_ name: String) {
 		profileName.text = name
 	}

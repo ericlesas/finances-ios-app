@@ -10,9 +10,12 @@ import UIKit
 import LocalAuthentication
 
 class SplashViewController: UIViewController {
+	
+	// MARK: - Properties
 	let contentView = SplashView()
 	public weak var flowDelegate: SplashFlowDelegate?
 	
+	// MARK: - Initializer
 	init(flowDelegate: SplashFlowDelegate) {
 		self.flowDelegate = flowDelegate
 		super.init(nibName: nil, bundle: nil)
@@ -22,6 +25,7 @@ class SplashViewController: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		contentView.logoImageView.alpha = 0.0
@@ -29,6 +33,7 @@ class SplashViewController: UIViewController {
 		startAnimations()
 	}
 	
+	// MARK: - Setup Methods
 	private func setup() {
 		self.view.addSubview(contentView)
 		self.navigationController?.navigationBar.isHidden = true
@@ -54,7 +59,7 @@ class SplashViewController: UIViewController {
 		}
 	}
 	
-	
+	// MARK: - Private Methods
 	private func decideNavigationFlow() {
 		if let user = UserDefaultsManager.loadUser(), user.userIsSaved {
 			user.hasBiometryEnabled ? authenticateWithFaceId() : flowDelegate?.navigateToHomeFromSplash()
@@ -64,7 +69,7 @@ class SplashViewController: UIViewController {
 	}
 }
 
-// MARK: - Animations
+// MARK: - Extensions
 extension SplashViewController {
 	private func startBreathingAnimation() {
 		UIView.animate(withDuration: 1.5,
@@ -87,7 +92,6 @@ extension SplashViewController {
 	}
 }
 
-// MARK: - Biometry Access Configuration
 extension SplashViewController {
 	private func authenticateWithFaceId() {
 		let context = LAContext()

@@ -39,3 +39,8 @@
 "new.expense.bottom.sheet.transaction.placeholder" = "Título da transação";
 "new.expense.bottom.sheet.category.placeholder" = "Categoria";
 "new.expense.bottom.sheet.button.save" = "Salvar";
+"new.expense.bottom.sheet.expense.value.placeholder" = "0,00";
+"new.expense.bottom.sheet.date.placeholder" = "00/00/0000";
+"new.expense.bottom.sheet.income.button" = "Entrada";
+"new.expense.bottom.sheet.outcome.button" = "Saída";
+

@@ -10,7 +10,6 @@ import UIKit
 
 extension UIViewController {
 	
-	// MARK: - Activate automatic keyboard adjustment
 	func enableKeyboardHandling() {
 		NotificationCenter.default.addObserver(self,
 											   selector: #selector(keyboardWillShow),

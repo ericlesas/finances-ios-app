@@ -9,9 +9,12 @@ import Foundation
 import UIKit
 
 class UserDefaultsManager {
+	
+	// MARK: - Properties
 	private static let userKey = "userKey"
 	private static let profileImageKey = "profileImageKey"
 	
+	// MARK: - Static Methods
 	static func saveUser(user: User) {
 		let encoder = JSONEncoder()
 		if let encoded = try? encoder.encode(user) {

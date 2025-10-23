@@ -10,6 +10,7 @@ import UIKit
 
 class SplashView: UIView {
 	
+	// MARK: - Properties
 	let logoImageView: UIImageView = {
 		let image = UIImageView()
 		image.image = UIImage(named: "splash-logo")
@@ -18,6 +19,7 @@ class SplashView: UIView {
 		return image
 	}()
 	
+	// MARK: - Initializer
 	init() {
 		super.init(frame: .zero)
 		setupUI()
@@ -27,6 +29,7 @@ class SplashView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Setup Methods
 	private func setupUI() {
 		addSubview(logoImageView)
 		setupConstraints()

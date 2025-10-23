@@ -10,9 +10,12 @@ import UIKit
 
 class NewExpenseBottomSheetViewController: UIViewController {
 	
+	// MARK: - Properties
 	let contentView = NewExpenseBottomSheetView()
 	public weak var flowDelegate: NewExpenseBottomSheetFlowDelegate?
+	private let buttonGroup = ButtonGroup()
 	
+	// MARK: - Initializer
 	init(flowDelegate: NewExpenseBottomSheetFlowDelegate) {
 		self.flowDelegate = flowDelegate
 		super.init(nibName: nil, bundle: nil)
@@ -22,11 +25,14 @@ class NewExpenseBottomSheetViewController: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
+		setupButtonGroup()
 	}
 	
+	// MARK: - Setup Methods
 	private func setupUI() {
 		self.view.addSubview(contentView)
 		configureSheetPresentation()
@@ -42,6 +48,13 @@ class NewExpenseBottomSheetViewController: UIViewController {
 			contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
 			contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 			contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+		])
+	}
+	
+	private func setupButtonGroup() {
+		buttonGroup.addButtons([
+			contentView.incomeButton,
+			contentView.outcomeButton
 		])
 	}
 	

@@ -9,9 +9,12 @@ import Foundation
 import UIKit
 
 class HomeViewController: UIViewController {
+	
+	// MARK: - Properties
 	let contentView = HomeView()
 	public weak var flowDelegate: HomeFlowDelegate?
 	
+	// MARK: - Initializers
 	init(flowDelegate: HomeFlowDelegate) {
 		self.flowDelegate = flowDelegate
 		super.init(nibName: nil, bundle: nil)
@@ -21,6 +24,7 @@ class HomeViewController: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setupUI()
@@ -28,6 +32,7 @@ class HomeViewController: UIViewController {
 		getProfileImage()
 	}
 	
+	// MARK: - Setup Methods
 	private func setupUI() {
 		self.view.addSubview(contentView)
 		self.view.backgroundColor = Colors.gray100
@@ -65,7 +70,7 @@ class HomeViewController: UIViewController {
 	}
 }
 
-// MARK: - Extension
+// MARK: - Extensions
 extension HomeViewController: HomeViewDelegate {
 	func didTapLogoutButton() {
 		UserDefaultsManager.removeUser()
@@ -82,7 +87,6 @@ extension HomeViewController: HomeViewDelegate {
 	}
 }
 
-// MARK: - Extension
 extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 	private func changeProfileImage() {
 		let picker = UIImagePickerController()

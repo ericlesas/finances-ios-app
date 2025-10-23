@@ -14,6 +14,7 @@ public protocol ButtonDelegate: AnyObject {
 
 class Button: UIButton {
 	
+	// MARK: - Properties
 	public weak var delegate: ButtonDelegate?
 	
 	public init(title: String, backgroundColor: UIColor = Colors.magenta) {
@@ -26,6 +27,7 @@ class Button: UIButton {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Setup Methods
 	private func setupButton(title: String,
 							 backgroundColor: UIColor) {
 		self.setTitle(title, for: .normal)
@@ -37,6 +39,7 @@ class Button: UIButton {
 		self.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 	}
 	
+	// MARK: - Actions
 	@objc
 	private func buttonTapped() {
 		delegate?.buttonAction()

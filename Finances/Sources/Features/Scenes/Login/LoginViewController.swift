@@ -9,10 +9,13 @@ import UIKit
 import LocalAuthentication
 
 class LoginViewController: UIViewController {
+	
+	// MARK: - Properties
 	let viewModel = LoginViewModel()
 	let contentView = LoginView()
 	public weak var flowDelegate: LoginFlowDelegate?
 	
+	// MARK: - Initializer
 	init(flowDelegate: LoginFlowDelegate) {
 		self.flowDelegate = flowDelegate
 		super.init(nibName: nil, bundle: nil)
@@ -22,6 +25,7 @@ class LoginViewController: UIViewController {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		animateLoginTransition()
@@ -35,6 +39,7 @@ class LoginViewController: UIViewController {
 		disableKeyboardHandling()
 	}
 	
+	// MARK: - Setup Methods
 	private func setupUI() {
 		self.view.addSubview(contentView)
 		self.view.backgroundColor = Colors.gray100

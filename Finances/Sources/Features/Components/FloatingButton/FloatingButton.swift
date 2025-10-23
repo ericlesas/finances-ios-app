@@ -14,8 +14,10 @@ public protocol FloatingButtonDelegate: AnyObject {
 
 class FloatingButton: UIButton {
 	
+	// MARK: - Properties
 	public weak var delegate: FloatingButtonDelegate?
 	
+	// MARK: - Initializer
 	public init(backgroundColor: UIColor = Colors.magenta) {
 		super.init(frame: .zero)
 		setupFloatingButton()
@@ -25,12 +27,14 @@ class FloatingButton: UIButton {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Setup Methods
 	private func setupFloatingButton() {
 		self.setImage(UIImage(named: "floating-button"), for: .normal)
 		self.layer.shadowColor = UIColor.black.cgColor
 		self.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 	}
 	
+	// MARK: - Actions
 	@objc
 	private func buttonTapped() {
 		delegate?.buttonAction()

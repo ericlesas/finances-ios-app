@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class LoginView: UIView {
+	
+	// MARK: - Properties
 	public weak var delegate: LoginViewDelegate?
 	private var isPasswordVisible = false
 	
@@ -65,12 +67,12 @@ class LoginView: UIView {
 	}()
 	
 	let loginButton: Button = {
-		let button = Button(title: "login.button.title".localized,
-							backgroundColor: Colors.magenta)
+		let button = Button(title: "login.button.title".localized)
 		button.translatesAutoresizingMaskIntoConstraints = false
 		return button
 	}()
 	
+	// MARK: - Initializer
 	init() {
 		super.init(frame: .zero)
 		setupUI()
@@ -81,6 +83,7 @@ class LoginView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: - Setup Methods
 	private func setupUI() {
 		addSubview(logoImageView)
 		addSubview(loginBackground)
