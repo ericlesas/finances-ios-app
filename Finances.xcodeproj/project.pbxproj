@@ -26,6 +26,8 @@
 		3B6D6F902E6654110067BE92 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6D6F8F2E6654110067BE92 /* User.swift */; };
 		3B6D6F932E6654960067BE92 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6D6F922E6654960067BE92 /* UserDefaultsManager.swift */; };
 		3B8957CE2EA9930A00C3C6F2 /* ButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8957CD2EA9930A00C3C6F2 /* ButtonGroup.swift */; };
+		3B8957D42EB0388400C3C6F2 /* MonthSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8957D32EB0388400C3C6F2 /* MonthSelectorView.swift */; };
+		3B8957D62EB0432600C3C6F2 /* MonthSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8957D52EB0432600C3C6F2 /* MonthSelectorViewModel.swift */; };
 		3B8A07AB2E3987E100473EB6 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A07AA2E3987E100473EB6 /* SplashViewController.swift */; };
 		3B8A07AD2E3987F100473EB6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A07AC2E3987F100473EB6 /* SplashView.swift */; };
 		3B8A07B12E39A0B700473EB6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8A07B02E39A0B700473EB6 /* Colors.swift */; };
@@ -45,6 +47,7 @@
 		3B90C9E92E3BFE1C0092977F /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B8A07BC2E3AA28100473EB6 /* Lato-ThinItalic.ttf */; };
 		3B90C9EC2E3C23450092977F /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90C9EB2E3C23450092977F /* Input.swift */; };
 		3B90C9F02E3D5EDF0092977F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90C9EF2E3D5EDF0092977F /* Button.swift */; };
+		3BACB6C62EB4149700E73800 /* MonthSelectorViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BACB6C52EB4149700E73800 /* MonthSelectorViewDelegate.swift */; };
 		3BD5DFF02E723227009BA731 /* Keyboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD5DFEF2E723227009BA731 /* Keyboard+Extensions.swift */; };
 		3BE0634F2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE0634E2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift */; };
 		3BE063512E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE063502E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift */; };
@@ -78,6 +81,8 @@
 		3B6D6F8F2E6654110067BE92 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3B6D6F922E6654960067BE92 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		3B8957CD2EA9930A00C3C6F2 /* ButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGroup.swift; sourceTree = "<group>"; };
+		3B8957D32EB0388400C3C6F2 /* MonthSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorView.swift; sourceTree = "<group>"; usesTabs = 1; wrapsLines = 1; };
+		3B8957D52EB0432600C3C6F2 /* MonthSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorViewModel.swift; sourceTree = "<group>"; };
 		3B8A07AA2E3987E100473EB6 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3B8A07AC2E3987F100473EB6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3B8A07B02E39A0B700473EB6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -97,6 +102,7 @@
 		3B8A07CC2E3ABCF100473EB6 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		3B90C9EB2E3C23450092977F /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		3B90C9EF2E3D5EDF0092977F /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		3BACB6C52EB4149700E73800 /* MonthSelectorViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthSelectorViewDelegate.swift; sourceTree = "<group>"; };
 		3BD5DFEF2E723227009BA731 /* Keyboard+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Extensions.swift"; sourceTree = "<group>"; };
 		3BE0634E2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseBottomSheetFlowDelegate.swift; sourceTree = "<group>"; };
 		3BE063502E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpenseBottomSheetViewDelegate.swift; sourceTree = "<group>"; };
@@ -164,19 +170,19 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		3B430C2A2E4A966900E9C471 /* viewModel */ = {
+		3B430C2A2E4A966900E9C471 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				3B430C2B2E4A969100E9C471 /* LoginViewModel.swift */,
 				3B430C2D2E4A969F00E9C471 /* LoginFlowDelegate.swift */,
 			);
-			path = viewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3B4DD3142E946B4600A51A4A /* NewExpenseBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
-				3BE0634D2E986AF40032222B /* viewModel */,
+				3BE0634D2E986AF40032222B /* ViewModel */,
 				3B4DD3152E946B6700A51A4A /* NewExpenseBottomSheetViewController.swift */,
 				3B4DD3182E946D7100A51A4A /* NewExpenseBottomSheetView.swift */,
 				3BE063502E986BA40032222B /* NewExpenseBottomSheetViewDelegate.swift */,
@@ -217,6 +223,32 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		3B8957CF2EB0381600C3C6F2 /* MonthSelectorView */ = {
+			isa = PBXGroup;
+			children = (
+				3B8957D22EB0386D00C3C6F2 /* ViewModel */,
+				3B8957D12EB0383A00C3C6F2 /* View */,
+			);
+			path = MonthSelectorView;
+			sourceTree = "<group>";
+		};
+		3B8957D12EB0383A00C3C6F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B8957D32EB0388400C3C6F2 /* MonthSelectorView.swift */,
+				3BACB6C52EB4149700E73800 /* MonthSelectorViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3B8957D22EB0386D00C3C6F2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B8957D52EB0432600C3C6F2 /* MonthSelectorViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3B8A07A62E3987A400473EB6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,7 +284,7 @@
 		3B8A07A92E3987CB00473EB6 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				3BF726742E82156F0036DF68 /* viewModel */,
+				3BF726742E82156F0036DF68 /* ViewModel */,
 				3B8A07AA2E3987E100473EB6 /* SplashViewController.swift */,
 				3B8A07AC2E3987F100473EB6 /* SplashView.swift */,
 			);
@@ -282,7 +314,7 @@
 		3B8A07B42E3A93EB00473EB6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3B430C2A2E4A966900E9C471 /* viewModel */,
+				3B430C2A2E4A966900E9C471 /* ViewModel */,
 				3B8A07B52E3A93FC00473EB6 /* LoginView.swift */,
 				3B8A07B92E3A95F700473EB6 /* LoginViewController.swift */,
 				3B430C2F2E4A990A00E9C471 /* LoginViewDelegate.swift */,
@@ -334,6 +366,7 @@
 		3B90C9EA2E3C22AE0092977F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3B8957CF2EB0381600C3C6F2 /* MonthSelectorView */,
 				3B90C9EE2E3D5EC60092977F /* Button */,
 				3B56B4752EA8554C00993CFA /* SelectableButton */,
 				3BF7267A2E8F3E6E0036DF68 /* FloatingButton */,
@@ -375,18 +408,18 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
-		3BE0634D2E986AF40032222B /* viewModel */ = {
+		3BE0634D2E986AF40032222B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				3BE0634E2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift */,
 			);
-			path = viewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3BE745EA2E78C0E100C40225 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3BF726752E8215840036DF68 /* viewModel */,
+				3BF726752E8215840036DF68 /* ViewModel */,
 				3BE745EB2E78C0F100C40225 /* HomeView.swift */,
 				3BE745ED2E78C4C500C40225 /* HomeViewController.swift */,
 				3BF726782E82179F0036DF68 /* HomeViewDelegate.swift */,
@@ -394,20 +427,20 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		3BF726742E82156F0036DF68 /* viewModel */ = {
+		3BF726742E82156F0036DF68 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				3B5B6C182E61281F007D8022 /* SplashFlowDelegate.swift */,
 			);
-			path = viewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		3BF726752E8215840036DF68 /* viewModel */ = {
+		3BF726752E8215840036DF68 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				3BF726762E8215C80036DF68 /* HomeFlowDelegate.swift */,
 			);
-			path = viewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3BF7267A2E8F3E6E0036DF68 /* FloatingButton */ = {
@@ -560,11 +593,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8957D42EB0388400C3C6F2 /* MonthSelectorView.swift in Sources */,
 				3B90C9EC2E3C23450092977F /* Input.swift in Sources */,
 				3B56B4772EA8556C00993CFA /* SelectableButton.swift in Sources */,
 				3B56B4732E9DCE6E00993CFA /* InputConfiguration.swift in Sources */,
 				3B8957CE2EA9930A00C3C6F2 /* ButtonGroup.swift in Sources */,
 				3B8A07BA2E3A95F700473EB6 /* LoginViewController.swift in Sources */,
+				3B8957D62EB0432600C3C6F2 /* MonthSelectorViewModel.swift in Sources */,
 				3BF7267C2E8F3E850036DF68 /* FloatingButton.swift in Sources */,
 				3B56B4712E9DCDB000993CFA /* UITextField+Extensions.swift in Sources */,
 				3BD5DFF02E723227009BA731 /* Keyboard+Extensions.swift in Sources */,
@@ -576,6 +611,7 @@
 				3B6D6F932E6654960067BE92 /* UserDefaultsManager.swift in Sources */,
 				3BF726792E82179F0036DF68 /* HomeViewDelegate.swift in Sources */,
 				3BE745EE2E78C4C500C40225 /* HomeViewController.swift in Sources */,
+				3BACB6C62EB4149700E73800 /* MonthSelectorViewDelegate.swift in Sources */,
 				3B8A07CD2E3ABCF100473EB6 /* Metrics.swift in Sources */,
 				3BE0634F2E986B310032222B /* NewExpenseBottomSheetFlowDelegate.swift in Sources */,
 				3B8A07B12E39A0B700473EB6 /* Colors.swift in Sources */,

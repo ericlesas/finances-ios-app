@@ -71,6 +71,8 @@ class HomeView: UIView {
 		return button
 	}()
 	
+	let monthSelector = MonthSelectorView()
+	
 	// MARK: - Initializer
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -90,6 +92,8 @@ class HomeView: UIView {
 		headerView.addSubview(welcomeFinancesLabel)
 		headerView.addSubview(logoutButton)
 		addSubview(contentBackgroundView)
+		contentBackgroundView.addSubview(monthSelector)
+		monthSelector.translatesAutoresizingMaskIntoConstraints = false
 		addSubview(floatingButton)
 		
 		setupConstraints()
@@ -129,6 +133,11 @@ class HomeView: UIView {
 			contentBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
 			contentBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
 			contentBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
+			
+			monthSelector.topAnchor.constraint(equalTo: contentBackgroundView.topAnchor, constant: Metrics.inputImageSize),
+			monthSelector.leadingAnchor.constraint(equalTo: contentBackgroundView.leadingAnchor, constant: Metrics.small),
+			monthSelector.trailingAnchor.constraint(equalTo: contentBackgroundView.trailingAnchor, constant: -Metrics.small),
+			monthSelector.heightAnchor.constraint(equalToConstant: Metrics.medium)
 		])
 	}
 	

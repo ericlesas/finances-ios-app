@@ -11,7 +11,8 @@ import UIKit
 class HomeViewController: UIViewController {
 	
 	// MARK: - Properties
-	let contentView = HomeView()
+	private let contentView = HomeView()
+	private let monthSelectorViewModel = MonthSelectorViewModel()
 	public weak var flowDelegate: HomeFlowDelegate?
 	
 	// MARK: - Initializers
@@ -27,7 +28,9 @@ class HomeViewController: UIViewController {
 	// MARK: - Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		contentView.delegate = self
 		setupUI()
+		setupMonthSelector()
 		getUsername()
 		getProfileImage()
 	}
@@ -36,7 +39,6 @@ class HomeViewController: UIViewController {
 	private func setupUI() {
 		self.view.addSubview(contentView)
 		self.view.backgroundColor = Colors.gray100
-		contentView.delegate = self
 		setupConstraints()
 	}
 
@@ -67,6 +69,18 @@ class HomeViewController: UIViewController {
 			contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
 			contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 		])
+	}
+	
+	// MARK: - Private Methods
+	private func setupMonthSelector() {
+		contentView.monthSelector.delegate = self
+		contentView.monthSelector.scrollToCurrentMonth()
+		contentView.monthSelector.configure(with: monthSelectorViewModel.months,
+											selectedIndex: monthSelectorViewModel.selectedIndex)
+		
+		monthSelectorViewModel.onMonthSelected = { [weak self] index in
+			print("Mês selecionado no ViewModel: \(index)")
+		}
 	}
 }
 
@@ -102,5 +116,12 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
 			UserDefaultsManager.saveProfileImage(chosenImage)
 		}
 		dismiss(animated: true)
+	}
+}
+
+extension HomeViewController: MonthSelectorViewDelegate {
+	func monthSelectorView(_ view: MonthSelectorView, didSelectMonthAt index: Int) {
+		monthSelectorViewModel.selectMonth(at: index)
+		contentView.monthSelector.updateSelection(at: index)
 	}
 }
